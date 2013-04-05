@@ -10,6 +10,8 @@ The preferred method is to use the [Sublime Package Manager](http://wbond.net/su
 
 	$ https://github.com/iiAtlas/SmartGoogle
 
+and placed in your Sublime Text 2 "Packages" folder
+
 # License
 
 All of Sublime Text 2 SmartGoogle Plugin is licensed under the MIT license.
