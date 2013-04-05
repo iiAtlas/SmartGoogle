@@ -1,0 +1,10 @@
+[
+	{
+		"command": "search_google_from_selection",
+		"caption": "SmartGoogle: Search from selction"
+	},
+	{
+		"command": "search_google_from_input",
+		"caption": "SmartGoogle: Search from input"
+	}
+]

@@ -1,0 +1,4 @@
+[
+	{ "keys": ["super+shift+ctrl+g"], "command": "search_google_from_selection" },
+	{ "keys": ["super+shift+alt+g"], "command": "search_google_from_input" }
+]

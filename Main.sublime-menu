@@ -1,0 +1,26 @@
+[
+	{
+		"caption": "Tools",
+		"mnemonic": "t",
+		"id": "tools",
+		"children":
+		[
+			{
+				"caption": "SmartGoogle",
+				"mnemonic": "g",
+				"id": "smartgoogle",
+				"children":
+				[
+					{
+						"command": "search_google_from_selection",
+						"caption": "SmartSearch from selection"
+					},
+					{
+						"command": "search_google_from_input",
+						"caption": "SmartSearch from input"	
+					}
+				]
+			}
+		]
+	}
+]
