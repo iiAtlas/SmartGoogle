@@ -1,9 +1,32 @@
 import sublime, sublime_plugin
 import webbrowser
+from xgoogle.search import GoogleSearch, SearchError
+
+urls = []
 
 def searchFor(text):
-	url = "https://www.google.com/search?q=" + text.replace(" ", "+")
-	webbrowser.open_new_tab(url)
+	gs = GoogleSearch(text)
+	gs.results_per_page = 32
+	page = 1
+	results = []
+	titles = []
+	while page < 5:
+		results.extend(gs.get_results())
+		page += 1
+	results = results[:10]
+	for res in results:
+		titles.append(str(res.title.encode("utf-8")))
+		urls.append(str(res.url.encode("utf-8")))
+
+	print len(results)
+	print titles
+
+	try: sublime.active_window().show_quick_panel(titles, onSelection, sublime.MONOSPACE_FONT)
+	except: webbrowser.open_new_tab("https://www.google.com/search?q=" + text.replace(" ", "+"))
+
+def onSelection(index):
+	if(index >= 0):
+		webbrowser.open_new_tab(urls[index])
 
 def getLanguage(view):
 	lang = view.settings().get('syntax')
